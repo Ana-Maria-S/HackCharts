@@ -1,26 +1,22 @@
 import React from 'react';
 import logo from './logo.svg';
+//import {ScatterPlotNivo} from './NivoChart';
+import { VictoryChartComponent } from './ChartLibrariesComponents/VictoryChart';
+import { VictoryTheme, VictoryChart, VictoryScatter } from 'victory';
+
 import './App.css';
+import { ReactVisComponent } from './ChartLibrariesComponents/ReactVisChart';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <div className="col-s">
+            <h1>Victory chart</h1>
+            <VictoryChartComponent />
+            <h1>ReactVis chart</h1>
+            <ReactVisComponent />
+        </div>
+        //<ScatterPlotNivo></ScatterPlotNivo>
+    );
 }
 
 export default App;
